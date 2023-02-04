@@ -1,0 +1,35 @@
+.our {
+  place-items: center;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+
+  @include respond(phone) {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+
+    &__img {
+      height: 40rem;
+      width: 40rem;
+      border-radius: 3px;
+      transition: transform 0.3s;
+
+      @include respond(tab-port) {
+        height: 25rem;
+        width: 25rem;
+      }
+    }
+
+    &:hover {
+      transform: translateY(0.3rem) scale(1.1);
+    }
+  }
+
+  &__description {
+    font-size: 1.8rem;
+    line-height: 1.8;
+
+    @include respond(phone) {
+      font-size: $default-font-size;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.heading-primary {
+  color: $color-text-dark;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+  font-size: 4.4rem;
+  letter-spacing: 1px;
+
+  @include respond(phone) {
+    font-size: 4rem;
+  }
+}
+
+.heading-secondary {
+  color: $color-text-dark;
+  font-weight: 700;
+  font-size: 3.6rem;
+  text-align: center;
+
+  & span {
+    display: block;
+  }
+}

@@ -1,0 +1,23 @@
+.promise {
+  gap: 6.4rem;
+
+  &__feature {
+    text-align: center;
+    color: $color-text-light-2;
+    font-weight: 500;
+  }
+
+  &__img {
+    height: 32rem;
+    width: 32rem;
+
+    @include respond(tab-port) {
+      height: 16rem;
+      width: 16rem;
+    }
+  }
+
+  &__text {
+    font-size: 2rem;
+  }
+}

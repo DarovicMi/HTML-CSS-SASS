@@ -1,0 +1,113 @@
+.hero {
+  padding: 0 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+  @include respond(tab-land) {
+    display: inline-block;
+  }
+
+  &-box-1 {
+    align-self: flex-start;
+  }
+
+  &-box-2 {
+    position: relative;
+    flex-basis: 80%;
+
+    @include respond(tab-land) {
+      flex-basis: 100%;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    border-radius: 3px;
+    transition: transform 0.3s;
+    background: rgb(214, 241, 221);
+    background: linear-gradient(
+      90deg,
+      rgba($color-primary-light, 1) 0%,
+      rgba($color-primary, 0.7) 100%,
+      rgba($color-primary-dark, 0.5) 100%
+    );
+
+    @include respond(tab-land) {
+      position: static;
+      display: inline-block;
+      margin: 3.2rem 4.8rem;
+    }
+
+    @include respond(phone) {
+      display: flex;
+    }
+
+    &:hover {
+      transform: translateY(-3px) scale(1.1);
+      z-index: 1000;
+    }
+  }
+
+  &__customers {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+    margin-top: 8rem;
+    &-text {
+      color: $color-text-light;
+      font-weight: 600;
+    }
+    &-text span {
+      color: $color-primary;
+      font-weight: 700;
+    }
+  }
+  &__customer-img {
+    border-radius: 50%;
+    height: 4.8rem;
+    width: 4.8rem;
+    border: 3px solid $color-primary-light;
+
+    &:not(:last-child) {
+      margin-right: -1.6rem;
+    }
+  }
+
+  &__img--1 {
+    bottom: 0;
+    left: 0;
+  }
+  &__img--2 {
+    top: -3rem;
+    left: 15rem;
+  }
+  &__img--3 {
+    top: 11rem;
+    left: 2rem;
+  }
+
+  &__description {
+    margin-bottom: 4.8rem;
+    font-size: 2rem;
+    color: $color-text-light;
+
+    line-height: 1.8;
+  }
+
+  &__links-box {
+    display: flex;
+    gap: 1.6rem;
+  }
+
+  &__img {
+    height: 20rem;
+    overflow: hidden;
+
+    @include respond(tab-land) {
+      height: 14.5rem;
+    }
+    @include respond(tab-port) {
+      height: 12.8rem;
+    }
+  }
+}
